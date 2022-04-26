@@ -73,7 +73,7 @@ struct LoginView: View {
                 Spacer()
                 
             }
-            .toast(message: "Looks like you've entered the wrong password! Please try again",isShowing: $showWrongPasswordAlert, duration: Toast.short)
+            .toast(message: "Looks like you've entered the wrong email/password! Please try again",isShowing: $showWrongPasswordAlert, duration: Toast.short)
         }
     }
     
