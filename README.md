@@ -19,5 +19,6 @@ Take home assignment for iOS intern position at Tweek Labs
 
 ### Resources
 * [SwiftUI Recipies blog](https://swiftuirecipes.com/blog/swiftui-toast) for toast messages 
+* [SO Post](https://stackoverflow.com/questions/56760335/round-specific-corners-swiftui) for adding corner radius to specific edges
 
 
