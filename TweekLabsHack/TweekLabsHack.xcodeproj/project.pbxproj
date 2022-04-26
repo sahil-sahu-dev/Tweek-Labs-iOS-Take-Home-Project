@@ -22,6 +22,7 @@
 		B23FFD532817A6F200F20A8A /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B23FFD522817A6F200F20A8A /* OpenSans-SemiBold.ttf */; };
 		B23FFD552817B60800F20A8A /* AthleteSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FFD542817B60800F20A8A /* AthleteSessionsView.swift */; };
 		B25B5AAA2817CB250036A7A4 /* Extention+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B5AA92817CB250036A7A4 /* Extention+View.swift */; };
+		B25B5AAC2817CF820036A7A4 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B5AAB2817CF820036A7A4 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B23FFD522817A6F200F20A8A /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		B23FFD542817B60800F20A8A /* AthleteSessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteSessionsView.swift; sourceTree = "<group>"; };
 		B25B5AA92817CB250036A7A4 /* Extention+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+View.swift"; sourceTree = "<group>"; };
+		B25B5AAB2817CF820036A7A4 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				B23FFD2C2817868300F20A8A /* AthleteHomeView.swift */,
 				B23FFD542817B60800F20A8A /* AthleteSessionsView.swift */,
 				B23FFD422817931F00F20A8A /* LoginView.swift */,
+				B25B5AAB2817CF820036A7A4 /* Toast.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				B23FFD432817931F00F20A8A /* LoginView.swift in Sources */,
 				B23FFD552817B60800F20A8A /* AthleteSessionsView.swift in Sources */,
 				B23FFD5128179B2D00F20A8A /* DrawingConstants.swift in Sources */,
+				B25B5AAC2817CF820036A7A4 /* Toast.swift in Sources */,
 				B23FFD2B2817868300F20A8A /* TweekLabsHackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

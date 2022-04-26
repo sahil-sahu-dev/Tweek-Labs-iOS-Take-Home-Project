@@ -17,6 +17,7 @@ struct LoginView: View {
     
     @State private var phoneNum: String = ""
     @State private var password: String = ""
+    @State private var showWrongPasswordAlert = false
     
     let didCompleteLoginProcess: () -> ()
     
@@ -71,8 +72,8 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                
             }
+            .toast(message: "Looks like you've entered the wrong password! Please try again",isShowing: $showWrongPasswordAlert, duration: Toast.short)
         }
     }
     
@@ -113,6 +114,10 @@ struct LoginView: View {
             
             if shouldSignInUsing(phone: phoneNum, password: password) {
                 self.didCompleteLoginProcess()
+            }
+            
+            else{
+                self.showWrongPasswordAlert.toggle()
             }
             
         } label: {
