@@ -18,21 +18,43 @@ struct AthleteHomeView: View {
             VStack{
                 
             }
-                .fullScreenCover(isPresented: $isUserLoggedOut, onDismiss: nil) {
-                    LoginView {
-                        self.isUserLoggedOut = false
-                    }
+            .fullScreenCover(isPresented: $isUserLoggedOut, onDismiss: nil) {
+                LoginView {
+                    self.isUserLoggedOut = false
                 }
+            }
         }
         
         else{
             ZStack{
                 DrawingConstants.redLinearGradient.edgesIgnoringSafeArea(.all)
-                userDetailsView
+                VStack{
+                    userDetailsView
+                    ZStack{
+                        
+                        AthleteSessionsView(athleteSessions: athleteDoc.athlete!.athlete_sessions)
+                        
+                            .cornerRadius(40, corners: [.topLeft, .topRight])
+                        
+                        .overlay(plusCircle, alignment: .bottomTrailing)
+                        
+                    }
+                    
+                    
+                }
             }
         }
     }
     
+    var plusCircle: some View {
+        
+        DrawingConstants.redLinearGradient
+            .frame(width: 67, height: 67)
+            .cornerRadius(40)
+            .padding()
+            .overlay(Image("plus"), alignment: .center)
+            .shadow(radius: 30)
+    }
     
     var userDetailsView: some View {
         
@@ -77,7 +99,6 @@ struct AthleteHomeView: View {
                 }
             }
             
-            Spacer()
         }
     }
     
@@ -96,5 +117,24 @@ struct AthleteHomeView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         AthleteHomeView(athleteDoc: AthleteDocument())
+    }
+}
+
+
+extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
+struct RoundedCorner: Shape {
+    
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+    
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
     }
 }
