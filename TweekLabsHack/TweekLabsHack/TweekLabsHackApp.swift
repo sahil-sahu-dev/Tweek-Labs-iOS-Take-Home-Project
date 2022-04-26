@@ -11,7 +11,7 @@ import SwiftUI
 struct TweekLabsHackApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AthleteHomeView(athleteDoc: AthleteDocument())
         }
     }
 }

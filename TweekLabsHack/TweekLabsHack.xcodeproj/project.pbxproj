@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		B23FFD2B2817868300F20A8A /* TweekLabsHackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FFD2A2817868300F20A8A /* TweekLabsHackApp.swift */; };
-		B23FFD2D2817868300F20A8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FFD2C2817868300F20A8A /* ContentView.swift */; };
+		B23FFD2D2817868300F20A8A /* AthleteHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FFD2C2817868300F20A8A /* AthleteHomeView.swift */; };
 		B23FFD2F2817868600F20A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23FFD2E2817868600F20A8A /* Assets.xcassets */; };
 		B23FFD322817868600F20A8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23FFD312817868600F20A8A /* Preview Assets.xcassets */; };
 		B23FFD3C281788E000F20A8A /* AthleteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FFD3B281788E000F20A8A /* AthleteModel.swift */; };
+		B23FFD4028178AFC00F20A8A /* AthleteDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FFD3F28178AFC00F20A8A /* AthleteDocument.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B23FFD272817868300F20A8A /* TweekLabsHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweekLabsHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23FFD2A2817868300F20A8A /* TweekLabsHackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweekLabsHackApp.swift; sourceTree = "<group>"; };
-		B23FFD2C2817868300F20A8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B23FFD2C2817868300F20A8A /* AthleteHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteHomeView.swift; sourceTree = "<group>"; };
 		B23FFD2E2817868600F20A8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B23FFD312817868600F20A8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B23FFD3B281788E000F20A8A /* AthleteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteModel.swift; sourceTree = "<group>"; };
+		B23FFD3F28178AFC00F20A8A /* AthleteDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDocument.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +55,10 @@
 		B23FFD292817868300F20A8A /* TweekLabsHack */ = {
 			isa = PBXGroup;
 			children = (
-				B23FFD3D281788E500F20A8A /* Models */,
 				B23FFD2A2817868300F20A8A /* TweekLabsHackApp.swift */,
-				B23FFD2C2817868300F20A8A /* ContentView.swift */,
+				B23FFD412817927F00F20A8A /* Views */,
+				B23FFD3E28178ACB00F20A8A /* ViewModels */,
+				B23FFD3D281788E500F20A8A /* Models */,
 				B23FFD2E2817868600F20A8A /* Assets.xcassets */,
 				B23FFD302817868600F20A8A /* Preview Content */,
 			);
@@ -76,6 +79,22 @@
 				B23FFD3B281788E000F20A8A /* AthleteModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B23FFD3E28178ACB00F20A8A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B23FFD3F28178AFC00F20A8A /* AthleteDocument.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B23FFD412817927F00F20A8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B23FFD2C2817868300F20A8A /* AthleteHomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B23FFD3C281788E000F20A8A /* AthleteModel.swift in Sources */,
-				B23FFD2D2817868300F20A8A /* ContentView.swift in Sources */,
+				B23FFD2D2817868300F20A8A /* AthleteHomeView.swift in Sources */,
+				B23FFD4028178AFC00F20A8A /* AthleteDocument.swift in Sources */,
 				B23FFD2B2817868300F20A8A /* TweekLabsHackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
