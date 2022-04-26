@@ -47,13 +47,16 @@ struct AthleteHomeView: View {
     }
     
     var plusCircle: some View {
-        
-        DrawingConstants.redLinearGradient
-            .frame(width: 67, height: 67)
-            .cornerRadius(40)
-            .padding()
-            .overlay(Image("plus"), alignment: .center)
-            .shadow(radius: 30)
+        Button {
+            
+        } label: {
+            DrawingConstants.redLinearGradient
+                .frame(width: 67, height: 67)
+                .cornerRadius(40)
+                .padding()
+                .overlay(Image("plus"), alignment: .center)
+                .shadow(radius: 30)
+        }
     }
     
     var userDetailsView: some View {
