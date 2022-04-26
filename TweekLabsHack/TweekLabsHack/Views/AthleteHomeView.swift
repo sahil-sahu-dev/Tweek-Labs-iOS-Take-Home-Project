@@ -16,11 +16,12 @@ struct AthleteHomeView: View {
         
         if isUserLoggedOut {
             VStack{
-                
+                //using an empty VStack if we have not signed in
             }
             .fullScreenCover(isPresented: $isUserLoggedOut, onDismiss: nil) {
                 LoginView {
                     self.isUserLoggedOut = false
+                        //closure to toggle isUserLoggedOut
                 }
             }
         }
@@ -106,6 +107,7 @@ struct AthleteHomeView: View {
     }
     
     
+    //formate date to date string
     private func formatDate(date: Date) -> String {
         
         let dateFormatter = DateFormatter()
@@ -124,20 +126,3 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner(radius: radius, corners: corners) )
-            .edgesIgnoringSafeArea(.all)
-    }
-}
-
-struct RoundedCorner: Shape {
-    
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-    
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
-    }
-}

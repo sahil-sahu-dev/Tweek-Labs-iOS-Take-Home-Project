@@ -15,10 +15,10 @@ class AthleteDocument: ObservableObject {
     
     init() {
         athlete = createAthleteObject()
-        
     }
     
     
+    //creates athlete object
     private func createAthleteObject() -> Athlete {
         
         var tempAthleteSessions = [AthleteSession]()
@@ -32,6 +32,8 @@ class AthleteDocument: ObservableObject {
         return tempAthlete
     }
     
+    
+    //formatting a date string to a date
     private func formateDate(date: String) -> Date {
         
            let dateFormatter = DateFormatter()
@@ -44,6 +46,7 @@ class AthleteDocument: ObservableObject {
     
     //MARK: Intents
     
+    //get sum of all balls bowled in all sessions
     func getBallsBowled() -> String {
         
         var ballsBowled = 0
@@ -55,6 +58,8 @@ class AthleteDocument: ObservableObject {
         return ballsBowled < 10 ? "0" + String(ballsBowled) : String(ballsBowled)
     }
     
+    
+    //get total sessions an athlete has done
     func getTotalSessions() -> String {
         
         return athlete!.athlete_sessions.count < 10 ? "0" + String(athlete!.athlete_sessions.count) : String(athlete!.athlete_sessions.count) 

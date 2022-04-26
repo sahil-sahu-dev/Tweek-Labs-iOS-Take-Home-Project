@@ -70,10 +70,13 @@ struct AthleteSessionsView: View {
 struct AthleteSessionsView_Previews: PreviewProvider {
    
     static var previews: some View {
-        
         AthleteSessionsView(athleteSessions: createAthleteSessionsDummyData())
     }
 }
+
+
+
+//MARK: Creating dummy data for previews
 
 func createAthleteSessionsDummyData() -> [AthleteSession]{
     var tempAthleteSessions = [AthleteSession]()
