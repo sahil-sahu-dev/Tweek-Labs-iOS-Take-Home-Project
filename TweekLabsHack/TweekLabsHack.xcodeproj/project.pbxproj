@@ -11,6 +11,7 @@
 		B23FFD2D2817868300F20A8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FFD2C2817868300F20A8A /* ContentView.swift */; };
 		B23FFD2F2817868600F20A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23FFD2E2817868600F20A8A /* Assets.xcassets */; };
 		B23FFD322817868600F20A8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23FFD312817868600F20A8A /* Preview Assets.xcassets */; };
+		B23FFD3C281788E000F20A8A /* AthleteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FFD3B281788E000F20A8A /* AthleteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B23FFD2C2817868300F20A8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B23FFD2E2817868600F20A8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B23FFD312817868600F20A8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B23FFD3B281788E000F20A8A /* AthleteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		B23FFD292817868300F20A8A /* TweekLabsHack */ = {
 			isa = PBXGroup;
 			children = (
+				B23FFD3D281788E500F20A8A /* Models */,
 				B23FFD2A2817868300F20A8A /* TweekLabsHackApp.swift */,
 				B23FFD2C2817868300F20A8A /* ContentView.swift */,
 				B23FFD2E2817868600F20A8A /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				B23FFD312817868600F20A8A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B23FFD3D281788E500F20A8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B23FFD3B281788E000F20A8A /* AthleteModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23FFD3C281788E000F20A8A /* AthleteModel.swift in Sources */,
 				B23FFD2D2817868300F20A8A /* ContentView.swift in Sources */,
 				B23FFD2B2817868300F20A8A /* TweekLabsHackApp.swift in Sources */,
 			);
