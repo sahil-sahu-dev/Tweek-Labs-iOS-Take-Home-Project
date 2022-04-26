@@ -38,6 +38,7 @@ struct AthleteSessionsView: View {
                                     Text("\(session.balls_bowled) BALLS ")
                                         .font(.custom("OpenSans-Bold", size: 14))
                                         .foregroundColor(DrawingConstants.darkRed)
+                                    
                                     Text("\(formatDate(date: session.date))")
                                         .font(.custom("OpenSans-SemiBold", size: 14))
                                         .foregroundColor(DrawingConstants.darkBlack)
@@ -83,7 +84,7 @@ func createAthleteSessionsDummyData() -> [AthleteSession]{
     
     tempAthleteSessions.append(AthleteSession(balls_bowled: 2, date: formatDate(date: "12/02/2022, 03:24 PM")))
     tempAthleteSessions.append(AthleteSession(balls_bowled: 4, date: formatDate(date: "13/02/2022, 04:45 PM")))
-    tempAthleteSessions.append(AthleteSession(balls_bowled: 8, date: formatDate(date: "14/02/2022 06:43 AM")))
+    tempAthleteSessions.append(AthleteSession(balls_bowled: 8, date: formatDate(date: "14/02/2022, 06:43 AM")))
     
     return tempAthleteSessions
 }
@@ -91,9 +92,9 @@ func createAthleteSessionsDummyData() -> [AthleteSession]{
 private func formatDate(date: String) -> Date {
     
        let dateFormatter = DateFormatter()
-       dateFormatter.dateFormat = "MM/dd/yy, hh:mm a"
+       dateFormatter.dateFormat = "dd/MM/yyyy, hh:mm a"
        
-       let date = dateFormatter.date(from: date) ?? Date()
+       let date = dateFormatter.date(from: date)!
        
        return date
 }
@@ -101,7 +102,7 @@ private func formatDate(date: String) -> Date {
 private func formatDate(date: Date) -> String {
     
        let dateFormatter = DateFormatter()
-       dateFormatter.dateFormat = "MM/dd/yy, hh:mm a"
+       dateFormatter.dateFormat = "dd/MM/yyyy, hh:mm a"
        
        let date = dateFormatter.string(from: date)
        

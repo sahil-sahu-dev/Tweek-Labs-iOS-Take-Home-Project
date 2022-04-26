@@ -23,9 +23,9 @@ class AthleteDocument: ObservableObject {
         
         var tempAthleteSessions = [AthleteSession]()
         
-        tempAthleteSessions.append(AthleteSession(balls_bowled: 2, date: formateDate(date: "12/02/2022, 03:24 PM")))
-        tempAthleteSessions.append(AthleteSession(balls_bowled: 4, date: formateDate(date: "13/02/2022, 04:45 PM")))
-        tempAthleteSessions.append(AthleteSession(balls_bowled: 8, date: formateDate(date: "14/02/2022 06:43 AM")))
+        tempAthleteSessions.append(AthleteSession(balls_bowled: 2, date: formateDate(dateString: "12/02/2022, 03:24 PM")))
+        tempAthleteSessions.append(AthleteSession(balls_bowled: 4, date: formateDate(dateString: "13/02/2022, 04:45 PM")))
+        tempAthleteSessions.append(AthleteSession(balls_bowled: 8, date: formateDate(dateString: "14/02/2022, 06:43 AM")))
         
         let tempAthlete: Athlete = Athlete(name: "RA. JADEJA", bowler_type: "Pace Bowler", athlete_sessions: tempAthleteSessions)
         
@@ -34,12 +34,12 @@ class AthleteDocument: ObservableObject {
     
     
     //formatting a date string to a date
-    private func formateDate(date: String) -> Date {
+    private func formateDate(dateString: String) -> Date {
         
            let dateFormatter = DateFormatter()
-           dateFormatter.dateFormat = "MM/dd/yy, hh:mm a"
+           dateFormatter.dateFormat = "dd/MM/yyyy, hh:mm a"
            
-           let date = dateFormatter.date(from: date) ?? Date()
+           let date = dateFormatter.date(from: dateString)!
            
            return date
     }
