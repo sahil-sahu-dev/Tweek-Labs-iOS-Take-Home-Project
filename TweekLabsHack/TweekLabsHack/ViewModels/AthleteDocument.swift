@@ -27,7 +27,7 @@ class AthleteDocument: ObservableObject {
         tempAthleteSessions.append(AthleteSession(balls_bowled: 4, date: formateDate(date: "13/02/2022, 04:45 PM")))
         tempAthleteSessions.append(AthleteSession(balls_bowled: 8, date: formateDate(date: "14/02/2022 06:43 AM")))
         
-        let tempAthlete: Athlete = Athlete(name: "RA Jadeja", bowler_type: "Pace Bowler", athlete_sessions: tempAthleteSessions)
+        let tempAthlete: Athlete = Athlete(name: "RA. JADEJA", bowler_type: "Pace Bowler", athlete_sessions: tempAthleteSessions)
         
         return tempAthlete
     }
@@ -40,6 +40,24 @@ class AthleteDocument: ObservableObject {
            let date = dateFormatter.date(from: date) ?? Date()
            
            return date
+    }
+    
+    //MARK: Intents
+    
+    func getBallsBowled() -> String {
+        
+        var ballsBowled = 0
+        
+        for athleteSession in athlete!.athlete_sessions {
+            ballsBowled += athleteSession.balls_bowled
+        }
+        
+        return ballsBowled < 10 ? "0" + String(ballsBowled) : String(ballsBowled)
+    }
+    
+    func getTotalSessions() -> String {
+        
+        return athlete!.athlete_sessions.count < 10 ? "0" + String(athlete!.athlete_sessions.count) : String(athlete!.athlete_sessions.count) 
     }
     
 }

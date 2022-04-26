@@ -10,7 +10,7 @@ import SwiftUI
 struct AthleteHomeView: View {
     
     @ObservedObject var athleteDoc: AthleteDocument
-    @State var isUserLoggedOut = true
+    @State var isUserLoggedOut = false
     
     var body: some View {
         
@@ -26,12 +26,58 @@ struct AthleteHomeView: View {
         }
         
         else{
-            VStack{
-                ForEach(athleteDoc.athlete!.athlete_sessions){ session in
-                    Text("\(session.balls_bowled)")
-                    Text("\(formatDate(date: session.date))")
+            ZStack{
+                DrawingConstants.redLinearGradient.edgesIgnoringSafeArea(.all)
+                userDetailsView
+            }
+        }
+    }
+    
+    
+    var userDetailsView: some View {
+        
+        VStack(spacing: 5){
+            Image("user")
+                .padding()
+            
+            Text(athleteDoc.athlete!.name)
+                .font(.custom("OpenSans-Bold", size: 28))
+                .foregroundColor(.white)
+            
+            Text(athleteDoc.athlete!.bowler_type)
+                .font(.custom("OpenSans-Regular", size: 18))
+                .foregroundColor(.white)
+            
+            HStack{
+                VStack{
+                    HStack{
+                        Image("ball")
+                        Text(athleteDoc.getBallsBowled())
+                            .font(.custom("OpenSans-Bold", size: 32))
+                            .foregroundColor(.white)
+                    }
+                    
+                    Text("Balls Bowled")
+                        .foregroundColor(.white)
+                        .font(.custom("OpenSans-Bold", size: 12))
+                }
+                .padding()
+                
+                VStack{
+                    HStack{
+                        Image("calendar")
+                        Text(athleteDoc.getTotalSessions())
+                            .font(.custom("OpenSans-Bold", size: 32))
+                            .foregroundColor(.white)
+                    }
+                    
+                    Text("Total Sessions")
+                        .foregroundColor(.white)
+                        .font(.custom("OpenSans-Bold", size: 12))
                 }
             }
+            
+            Spacer()
         }
     }
     

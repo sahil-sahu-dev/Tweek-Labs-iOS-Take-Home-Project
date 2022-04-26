@@ -20,6 +20,7 @@
 		B23FFD4E2817971A00F20A8A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B23FFD4A2817964300F20A8A /* OpenSans-Regular.ttf */; };
 		B23FFD5128179B2D00F20A8A /* DrawingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FFD5028179B2D00F20A8A /* DrawingConstants.swift */; };
 		B23FFD532817A6F200F20A8A /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B23FFD522817A6F200F20A8A /* OpenSans-SemiBold.ttf */; };
+		B23FFD552817B60800F20A8A /* AthleteSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FFD542817B60800F20A8A /* AthleteSessionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B23FFD4A2817964300F20A8A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		B23FFD5028179B2D00F20A8A /* DrawingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingConstants.swift; sourceTree = "<group>"; };
 		B23FFD522817A6F200F20A8A /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		B23FFD542817B60800F20A8A /* AthleteSessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteSessionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				B23FFD2C2817868300F20A8A /* AthleteHomeView.swift */,
+				B23FFD542817B60800F20A8A /* AthleteSessionsView.swift */,
 				B23FFD422817931F00F20A8A /* LoginView.swift */,
 				B23FFD5028179B2D00F20A8A /* DrawingConstants.swift */,
 			);
@@ -207,6 +210,7 @@
 				B23FFD2D2817868300F20A8A /* AthleteHomeView.swift in Sources */,
 				B23FFD4028178AFC00F20A8A /* AthleteDocument.swift in Sources */,
 				B23FFD432817931F00F20A8A /* LoginView.swift in Sources */,
+				B23FFD552817B60800F20A8A /* AthleteSessionsView.swift in Sources */,
 				B23FFD5128179B2D00F20A8A /* DrawingConstants.swift in Sources */,
 				B23FFD2B2817868300F20A8A /* TweekLabsHackApp.swift in Sources */,
 			);
