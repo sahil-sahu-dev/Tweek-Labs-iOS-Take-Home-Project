@@ -12,6 +12,7 @@ struct TweekLabsHackApp: App {
     var body: some Scene {
         WindowGroup {
             AthleteHomeView(athleteDoc: AthleteDocument())
+            
         }
     }
 }

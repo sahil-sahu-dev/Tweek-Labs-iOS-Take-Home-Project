@@ -10,13 +10,27 @@ import SwiftUI
 struct AthleteHomeView: View {
     
     @ObservedObject var athleteDoc: AthleteDocument
+    @State var isUserLoggedOut = true
     
     var body: some View {
-        VStack{
-            
-            ForEach(athleteDoc.athlete!.athlete_sessions){ session in
-                Text("\(session.balls_bowled)")
-                Text("\(formatDate(date: session.date))")
+        
+        if isUserLoggedOut {
+            VStack{
+                
+            }
+                .fullScreenCover(isPresented: $isUserLoggedOut, onDismiss: nil) {
+                    LoginView {
+                        self.isUserLoggedOut = false
+                    }
+                }
+        }
+        
+        else{
+            VStack{
+                ForEach(athleteDoc.athlete!.athlete_sessions){ session in
+                    Text("\(session.balls_bowled)")
+                    Text("\(formatDate(date: session.date))")
+                }
             }
         }
     }
