@@ -111,10 +111,8 @@ struct LoginView: View {
         
         Button {
             
-            if phoneNum.elementsEqual(AccountDetails.phone)  && password.elementsEqual(AccountDetails.password) {
-                
+            if shouldSignInUsing(phone: phoneNum, password: password) {
                 self.didCompleteLoginProcess()
-                
             }
             
         } label: {
@@ -176,6 +174,13 @@ struct LoginView: View {
         }
         .modifier(customViewModifier(roundedCornes: 5, startColor: .orange, endColor: .purple, textColor: .white))
         .padding()
+    }
+    
+    func shouldSignInUsing(phone: String, password: String) -> Bool {
+        if phone.elementsEqual(AccountDetails.phone)  && password.elementsEqual(AccountDetails.password) {
+            return true
+        }
+        return false
     }
 }
 

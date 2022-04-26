@@ -10,7 +10,7 @@ import SwiftUI
 struct AthleteHomeView: View {
     
     @ObservedObject var athleteDoc: AthleteDocument
-    @State var isUserLoggedOut = false
+    @State var isUserLoggedOut = true
     
     var body: some View {
         
